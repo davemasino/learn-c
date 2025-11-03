@@ -31,7 +31,15 @@
               boost
               catch2
               cmake
+              starship
             ];
+            shellHook = ''
+              if [ -n "$ZSH_VERSION" ]; then
+                eval "$(starship init zsh)"
+              elif [ -n "$BASH_VERSION" ]; then
+                eval "$(starship init bash)"
+              fi
+            '';
           };
 
         };
