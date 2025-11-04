@@ -1,0 +1,29 @@
+# Compiled object files
+*.o
+*.obj
+
+# Static and shared libraries
+*.a
+*.la
+*.lo
+*.so
+*.dll
+*.dylib
+
+# Executables
+*.out
+*.exe
+a.out
+
+# Debug symbols and profiling data
+*.dSYM/
+*.prof
+
+# Build directories
+/build/
+/dist/
+
+# Editor swap/backup files
+*~
+*.swp
+*.swo
