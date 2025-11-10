@@ -17,6 +17,13 @@ unsigned putubin( unsigned n) {
     return digits;
 }
 
-int main() {
-    unsigned res = putubin(1);
+int main(void) {
+    unsigned value = 0;
+    if ( scanf("%u", &value) != 1 ) {
+        fputs("Expected an unsigned integer on stdin.\n", stderr);
+        return 1;
+    }
+    putubin(value);
+    putchar('\n');
+    return 0;
 }
