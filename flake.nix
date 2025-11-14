@@ -14,7 +14,6 @@
         in {
           default = pkgs.mkShell {
             packages = with pkgs; [
-              clang
               gdb
               starship
             ];
