@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-char* strcpy(char *dst, char const *src) {
+char* strcpy_old(char *dst, char const *src) {
     char *const dst_orig = dst;
     while ( true ) {
         *dst = *src;
@@ -9,6 +9,14 @@ char* strcpy(char *dst, char const *src) {
         ++dst;
         ++src;
     }
+}
+
+char* strcpy(char *dst, char const *src) {
+    char *const dst_orig = dst;
+    while( ( *dst++ = *src++ ) ) {
+        ;
+    }
+    return dst;
 }
 
 int main() {
